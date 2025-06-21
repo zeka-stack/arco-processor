@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Inherit from a parent project -->
+    <parent>
+        <groupId>dev.dong4j</groupId>
+        <artifactId>arco-supreme</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+        <!-- 因为 arco-supreme 是另一个 git 项目, 因此这里使用如下配置, 表示: 无本地路径，直接从仓库获取 -->
+        <relativePath/>
+    </parent>
+
+    <!-- Project coordinates -->
+    <artifactId>arco-processor</artifactId>
+    <version>${revision}</version>
+    <packaging>pom</packaging>
+
+    <!-- Project metadata -->
+    <name>Arco Processor</name>
+    <description>Zeka.Stack 注解处理器</description>
+    <url>https://github.com/zeka-stack/arco-processor</url>
+    <inceptionYear>2025</inceptionYear>
+
+    <!-- Organization -->
+    <organization>
+        <name>Zeka Stack Inc.</name>
+        <url>https://github.com/zeka-stack</url>
+    </organization>
+
+    <!-- License -->
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/license/MIT</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <!-- Developers -->
+    <developers>
+        <developer>
+            <id>dong4j</id>
+            <name>dong4j</name>
+            <email>dong4j@gmail.com</email>
+            <organization>Zeka.Stack</organization>
+            <organizationUrl>https://github.com/zeka-stack</organizationUrl>
+            <roles>
+                <role>designer</role>
+                <role>developer</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <!-- SCM (Source Control Management) -->
+    <scm>
+        <url>https://github.com/zeka-stack/arco-processor</url>
+        <connection>scm:git:https://github.com/zeka-stack/arco-processor.git</connection>
+        <developerConnection>scm:git:git@github.com:zeka-stack/arco-processor.git</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <!-- Issue tracking -->
+    <issueManagement>
+        <system>GitHub Issues</system>
+        <url>https://github.com/zeka-stack/arco-processor/issues</url>
+    </issueManagement>
+
+    <!-- CI/CD system -->
+    <ciManagement>
+        <system>GitHub Actions</system>
+        <url>https://github.com/zeka-stack/arco-processor/actions</url>
+    </ciManagement>
+
+    <!-- Contributors (optional) -->
+    <contributors>
+        <contributor>
+            <name>dong4j</name>
+            <email>dong4j@gmail.com</email>
+            <url>https://github.com/dong4j</url>
+            <organization>Zeka.Stack</organization>
+            <roles>
+                <role>maintainer</role>
+            </roles>
+        </contributor>
+    </contributors>
+
+    <modules>
+        <module>arco-processor-annotation</module>
+        <module>arco-processor-core</module>
+    </modules>
+
+    <properties>
+        <!-- Project revision -->
+        <revision>0.0.1-SNAPSHOT</revision>
+        <auto-service.version>1.0-rc6</auto-service.version>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>dev.dong4j</groupId>
+                <artifactId>arco-processor-annotation</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <includes>
+                    <include>**/**</include>
+                </includes>
+                <!-- 不替换占位符 -->
+                <filtering>false</filtering>
+                <excludes>
+                    <!--排除 jrebel 配置文件-->
+                    <exclude>rebel.xml</exclude>
+                </excludes>
+            </resource>
+        </resources>
+    </build>
+
+</project>
