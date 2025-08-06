@@ -90,12 +90,14 @@
     <modules>
         <module>arco-processor-annotation</module>
         <module>arco-processor-core</module>
+        <!-- <module>arco-processor-sample</module> -->
     </modules>
 
     <properties>
         <!-- Project revision -->
         <revision>${global.version}</revision>
-        <auto-service.version>1.0-rc6</auto-service.version>
+        <auto-service.version>1.1.1</auto-service.version>
+        <guava.version>33.2.0-jre</guava.version>
     </properties>
 
     <dependencyManagement>
