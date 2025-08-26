@@ -18,15 +18,15 @@ package sample.processor.config;
 
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
 
 /**
  * 自动配置示例
- * 
- * <p>该类演示了如何使用 {@code @Configuration} 注解创建自动配置类。
+ *
+ * <p>该类演示了如何使用 {@code @AutoConfiguration} 注解创建自动配置类。
  * 注解处理器会自动检测此类并将其注册到相应的配置文件中。</p>
- * 
- * <p><strong>注意：</strong>当类被 {@code @Configuration} 注解标记时，
+ *
+ * <p><strong>注意：</strong>当类被 {@code @AutoConfiguration} 注解标记时，
  * 注解处理器会：</p>
  * <ul>
  *   <li>将此类添加到 {@code META-INF/spring.factories} 文件</li>
@@ -36,28 +36,28 @@ import org.springframework.context.annotation.Configuration;
  * @author L.cm
  * @since 2.0.0
  */
-@Configuration
+@AutoConfiguration
 @ConditionalOnProperty(prefix = "sample.processor", name = "enabled", havingValue = "true", matchIfMissing = true)
 public class AutoConfigurationSample {
-    
+
     /**
      * 示例服务 Bean
-     * 
+     *
      * @return SampleService 实例
      */
     @Bean
     public SampleService sampleService() {
         return new SampleService();
     }
-    
+
     /**
      * 示例服务实现类
      */
     public static class SampleService {
-        
+
         /**
          * 示例方法
-         * 
+         *
          * @param message 消息内容
          * @return 处理后的消息
          */

@@ -70,12 +70,12 @@ curl http://localhost:8080/sample/error
 
 ## 各类注解示例说明
 
-### 自动配置注解 (`@Configuration`)
+### 自动配置注解 (`@AutoConfiguration`)
 
 **文件**：`config/AutoConfigurationSample.java`
 
 ```java
-@Configuration
+@AutoConfiguration
 @ConditionalOnProperty(prefix = "sample.processor", name = "enabled", havingValue = "true")
 public class AutoConfigurationSample {
     @Bean
@@ -196,13 +196,13 @@ public class AlipayService implements PaymentService {
 
 ```java
 @AutoIgnore
-@Configuration
+@AutoConfiguration
 public class IgnoredConfiguration {
     // 此类不会被注解处理器处理
 }
 ```
 
-**效果**：即使有 `@Configuration` 注解，也不会被自动注册
+**效果**：即使有 `@AutoConfiguration` 注解，也不会被自动注册
 
 ## 启动日志观察
 

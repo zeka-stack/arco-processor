@@ -115,7 +115,7 @@ arco-processor/
 ### 2. 创建自动配置类
 
 ```java
-@Configuration
+@AutoConfiguration
 @ConditionalOnProperty(prefix = "my.starter", name = "enabled", havingValue = "true")
 public class MyAutoConfiguration {
 
@@ -167,7 +167,7 @@ target/classes/META-INF/
 ### 自动配置示例
 
 ```java
-@Configuration
+@AutoConfiguration
 @EnableConfigurationProperties(MyProperties.class)
 public class DatabaseAutoConfiguration {
 
@@ -287,12 +287,12 @@ public class MyRuntimeHintsRegistrar implements RuntimeHintsRegistrar {
 ```java
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-@Configuration
+@AutoConfiguration
 @ConditionalOnWebApplication
 public @interface WebAutoConfiguration {
 }
 
-@WebAutoConfiguration  // 会被识别为 @Configuration
+@WebAutoConfiguration  // 会被识别为 @AutoConfiguration
 public class MyWebAutoConfiguration {
     // ...
 }
