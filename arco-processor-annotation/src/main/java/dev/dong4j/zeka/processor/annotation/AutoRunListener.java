@@ -57,7 +57,7 @@ import static java.lang.annotation.RetentionPolicy.SOURCE;
  * }</pre>
  *
  * @author L.cm
- * @since 2.0.0
+ * @since 1.0.0
  * @see org.springframework.boot.SpringApplicationRunListener
  */
 @Documented

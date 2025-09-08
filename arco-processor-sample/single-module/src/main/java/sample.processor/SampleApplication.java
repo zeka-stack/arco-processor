@@ -10,7 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @version 1.0.0
  * @email "mailto:dong4j@gmail.com"
  * @date 2023.11.11 21:36
- * @since 2024.1.1
+ * @since 1.0.0
  */
 @SpringBootApplication
 public class SampleApplication extends ZekaStarter {

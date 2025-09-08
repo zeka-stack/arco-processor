@@ -54,7 +54,7 @@ import java.util.Set;
  * @param <K> 键的类型
  * @param <V> 值的类型
  * @author L.cm
- * @since 2.0.0
+ * @since 1.0.0
  */
 @SuppressWarnings("UnusedReturnValue")
 public class MultiSetMap<K, V> {

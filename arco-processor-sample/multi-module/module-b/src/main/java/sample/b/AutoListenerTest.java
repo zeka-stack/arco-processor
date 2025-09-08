@@ -12,7 +12,7 @@ import dev.dong4j.zeka.starter.launcher.spi.LauncherInitiation;
  * @version 1.0.0
  * @email "mailto:dong4j@gmail.com"
  * @date 2023.11.11 22:24
- * @since 2024.1.1
+ * @since 1.0.0
  */
 @AutoListener
 public class AutoListenerTest implements LauncherInitiation {
@@ -24,7 +24,7 @@ public class AutoListenerTest implements LauncherInitiation {
      * @param appName       app name
      * @param isLocalLaunch is local launch
      * @return the map
-     * @since 2024.1.1
+     * @since 1.0.0
      */
     @Override
     public Map<String, Object> launcher(ConfigurableEnvironment env, String appName, boolean isLocalLaunch) {
@@ -35,7 +35,7 @@ public class AutoListenerTest implements LauncherInitiation {
      * Gets name *
      *
      * @return the name
-     * @since 2024.1.1
+     * @since 1.0.0
      */
     @Override
     public String getName() {

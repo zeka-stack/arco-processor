@@ -70,7 +70,7 @@ import java.lang.annotation.Target;
  * }</pre>
  *
  * @author google (original), L.cm (enhanced)
- * @since 2.0.0
+ * @since 1.0.0
  * @see java.util.ServiceLoader
  */
 @Documented

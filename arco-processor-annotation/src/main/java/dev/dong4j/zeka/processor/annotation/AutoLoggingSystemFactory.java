@@ -55,7 +55,7 @@ import static java.lang.annotation.RetentionPolicy.SOURCE;
  *
  * @author L.cm
  * @see org.springframework.boot.logging.LoggingSystemFactory
- * @since 2.0.0
+ * @since 1.0.0
  */
 @Documented
 @Retention(SOURCE)

@@ -60,7 +60,7 @@ import static java.lang.annotation.RetentionPolicy.SOURCE;
  *
  * @author L.cm
  * @see org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker
- * @since 2.0.0
+ * @since 1.0.0
  */
 @Documented
 @Retention(SOURCE)

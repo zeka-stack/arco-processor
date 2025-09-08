@@ -76,7 +76,7 @@ import javax.tools.StandardLocation;
  * @see AotAutoType
  * @see org.springframework.aot.hint.RuntimeHintsRegistrar
  * @see org.springframework.beans.factory.aot.BeanRegistrationAotProcessor
- * @since 2.0.0
+ * @since 1.0.0
  */
 @SuppressWarnings("DuplicatedCode")
 @AutoService(Processor.class)

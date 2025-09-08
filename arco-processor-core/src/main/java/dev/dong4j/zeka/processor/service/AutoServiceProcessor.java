@@ -91,7 +91,7 @@ import javax.tools.StandardLocation;
  * @author L.cm (based on Google Auto Service)
  * @see dev.dong4j.zeka.processor.annotation.AutoService
  * @see java.util.ServiceLoader
- * @since 2.0.0
+ * @since 1.0.0
  */
 @SuppressWarnings("all")
 @SupportedOptions("debug")
@@ -107,7 +107,7 @@ public class AutoServiceProcessor extends AbstractMicaProcessor {
     /**
      * Auto service processor
      *
-     * @since 2024.2.0
+     * @since 1.0.0
      */
     public AutoServiceProcessor() {
 
@@ -117,7 +117,7 @@ public class AutoServiceProcessor extends AbstractMicaProcessor {
      * Init
      *
      * @param processingEnv processing env
-     * @since 2024.2.0
+     * @since 1.0.0
      */
     @Override
     public synchronized void init(ProcessingEnvironment processingEnv) {
@@ -129,7 +129,7 @@ public class AutoServiceProcessor extends AbstractMicaProcessor {
      * Gets supported annotation types *
      *
      * @return the supported annotation types
-     * @since 2024.2.0
+     * @since 1.0.0
      */
     @Override
     public Set<String> getSupportedAnnotationTypes() {
@@ -142,7 +142,7 @@ public class AutoServiceProcessor extends AbstractMicaProcessor {
      * @param annotations annotations
      * @param roundEnv    round env
      * @return the boolean
-     * @since 2024.2.0
+     * @since 1.0.0
      */
     @Override
     protected boolean processImpl(Set<? extends TypeElement> annotations, RoundEnvironment roundEnv) {
@@ -275,7 +275,7 @@ public class AutoServiceProcessor extends AbstractMicaProcessor {
      * @param providerImplementer provider implementer
      * @param providerType        provider type
      * @return the boolean
-     * @since 2024.2.0
+     * @since 1.0.0
      */
     private boolean checkImplementer(Element providerImplementer, TypeMirror providerType) {
         // TODO: We're currently only enforcing the subtype relationship
@@ -289,7 +289,7 @@ public class AutoServiceProcessor extends AbstractMicaProcessor {
      *
      * @param annotationMirror AnnotationMirror
      * @return value 集合
-     * @since 2024.2.0
+     * @since 1.0.0
      */
     private Set<TypeMirror> getValueFieldOfClasses(AnnotationMirror annotationMirror) {
         return getAnnotationValue(annotationMirror, "value")
@@ -316,7 +316,7 @@ public class AutoServiceProcessor extends AbstractMicaProcessor {
      * @param annotationMirror annotation mirror
      * @param elementName      element name
      * @return the annotation value
-     * @since 2024.2.0
+     * @since 1.0.0
      */
     public AnnotationValue getAnnotationValue(AnnotationMirror annotationMirror, String elementName) {
         Objects.requireNonNull(annotationMirror);
@@ -335,7 +335,7 @@ public class AutoServiceProcessor extends AbstractMicaProcessor {
      *
      * @param type type
      * @return the type
-     * @since 2024.2.0
+     * @since 1.0.0
      */
     public String getType(TypeMirror type) {
         if (type == null) {

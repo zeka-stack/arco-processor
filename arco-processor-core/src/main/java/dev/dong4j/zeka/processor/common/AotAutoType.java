@@ -54,7 +54,7 @@ import lombok.RequiredArgsConstructor;
  * @see org.springframework.aot.hint.RuntimeHintsRegistrar
  * @see org.springframework.beans.factory.aot.BeanRegistrationAotProcessor
  * @see org.springframework.beans.factory.aot.BeanFactoryInitializationAotProcessor
- * @since 2.0.0
+ * @since 1.0.0
  */
 @Getter
 @RequiredArgsConstructor

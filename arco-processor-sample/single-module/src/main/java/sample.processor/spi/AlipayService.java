@@ -22,27 +22,27 @@ import java.util.UUID;
 
 /**
  * 支付宝支付服务实现 - SPI 示例
- * 
+ *
  * <p>该类演示了如何使用 {@code @AutoService} 注解实现 Java SPI 服务提供者。
  * 注解处理器会自动在 {@code META-INF/services/} 目录下生成相应的配置文件。</p>
- * 
+ *
  * <p><strong>生成的配置文件：</strong></p>
  * <pre>
  * META-INF/services/sample.processor.spi.PaymentService
- * 
+ *
  * 文件内容：
  * sample.processor.spi.AlipayService
  * </pre>
  *
  * @author L.cm
- * @since 2.0.0
+ * @since 1.0.0
  */
 @AutoService(PaymentService.class)
 public class AlipayService implements PaymentService {
-    
+
     /**
      * 处理支付宝支付
-     * 
+     *
      * @param amount   支付金额
      * @param currency 货币类型
      * @return 支付结果
@@ -50,18 +50,18 @@ public class AlipayService implements PaymentService {
     @Override
     public PaymentResult processPayment(double amount, String currency) {
         System.out.println("使用支付宝处理支付: " + amount + " " + currency);
-        
+
         // 模拟支付处理逻辑
         boolean success = amount > 0;
         String message = success ? "支付宝支付成功" : "支付金额必须大于0";
         String transactionId = success ? "ALIPAY_" + UUID.randomUUID().toString().substring(0, 8).toUpperCase() : null;
-        
+
         return new PaymentResult(success, message, transactionId);
     }
-    
+
     /**
      * 获取支付方式名称
-     * 
+     *
      * @return 支付方式名称
      */
     @Override

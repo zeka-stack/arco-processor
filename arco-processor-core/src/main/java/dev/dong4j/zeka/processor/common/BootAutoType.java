@@ -64,7 +64,7 @@ import lombok.RequiredArgsConstructor;
  *
  * @author L.cm
  * @see dev.dong4j.zeka.processor.factories.AutoFactoriesProcessor
- * @since 2.0.0
+ * @since 1.0.0
  */
 @Getter
 @RequiredArgsConstructor

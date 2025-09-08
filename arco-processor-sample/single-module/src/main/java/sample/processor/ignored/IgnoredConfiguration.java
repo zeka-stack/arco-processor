@@ -34,7 +34,7 @@ import org.springframework.boot.autoconfigure.AutoConfiguration;
  * </ul>
  *
  * @author L.cm
- * @since 2.0.0
+ * @since 1.0.0
  */
 @AutoIgnore
 @AutoConfiguration

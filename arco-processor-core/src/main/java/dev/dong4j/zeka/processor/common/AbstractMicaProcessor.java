@@ -53,7 +53,7 @@ import javax.tools.Diagnostic.Kind;
  * </ul>
  *
  * @author L.cm
- * @since 2.0.0
+ * @since 1.0.0
  */
 public abstract class AbstractMicaProcessor extends AbstractProcessor {
 

@@ -75,7 +75,7 @@ import javax.tools.StandardLocation;
  * @author L.cm
  * @see BootAutoType
  * @see AutoIgnore
- * @since 2.0.0
+ * @since 1.0.0
  */
 @SuppressWarnings("all")
 @AutoService(Processor.class)

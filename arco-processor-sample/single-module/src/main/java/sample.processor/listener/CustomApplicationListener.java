@@ -22,11 +22,11 @@ import org.springframework.context.ApplicationListener;
 
 /**
  * 自定义应用监听器示例
- * 
+ *
  * <p>该类演示了如何使用 {@code @AutoListener} 注解创建应用监听器。
  * 注解处理器会自动将此类注册到 {@code META-INF/spring.factories} 文件中，
  * 使其在应用启动时被自动发现和注册。</p>
- * 
+ *
  * <p><strong>注册配置：</strong></p>
  * <pre>
  * org.springframework.context.ApplicationListener=\
@@ -34,14 +34,14 @@ import org.springframework.context.ApplicationListener;
  * </pre>
  *
  * @author L.cm
- * @since 2.0.0
+ * @since 1.0.0
  */
 @AutoListener
 public class CustomApplicationListener implements ApplicationListener<ApplicationReadyEvent> {
-    
+
     /**
      * 处理应用就绪事件
-     * 
+     *
      * @param event 应用就绪事件
      */
     @Override

@@ -31,22 +31,22 @@ import java.util.ServiceLoader;
 
 /**
  * 示例控制器
- * 
+ *
  * <p>该控制器演示了如何使用各种注解处理器生成的配置和 SPI 服务。</p>
  *
  * @author L.cm
- * @since 2.0.0
+ * @since 1.0.0
  */
 @RestController
 @RequestMapping("/sample")
 public class SampleController {
-    
+
     @Autowired
     private AutoConfigurationSample.SampleService sampleService;
-    
+
     @Autowired
     private Environment environment;
-    
+
     /**
      * 测试自动配置的服务
      */
@@ -58,7 +58,7 @@ public class SampleController {
         result.put("timestamp", System.currentTimeMillis());
         return result;
     }
-    
+
     /**
      * 测试环境配置
      */
@@ -72,7 +72,7 @@ public class SampleController {
         result.put("initializer-message", environment.getProperty("sample.processor.initializer.message"));
         return result;
     }
-    
+
     /**
      * 测试 SPI 服务
      */
@@ -80,16 +80,16 @@ public class SampleController {
     public Map<String, Object> testSpiServices(@RequestParam(defaultValue = "100") double amount,
                                               @RequestParam(defaultValue = "CNY") String currency) {
         Map<String, Object> result = new HashMap<>();
-        
+
         ServiceLoader<PaymentService> serviceLoader = ServiceLoader.load(PaymentService.class);
         for (PaymentService paymentService : serviceLoader) {
             PaymentService.PaymentResult paymentResult = paymentService.processPayment(amount, currency);
             result.put(paymentService.getPaymentMethod(), paymentResult);
         }
-        
+
         return result;
     }
-    
+
     /**
      * 触发异常测试故障分析器
      */

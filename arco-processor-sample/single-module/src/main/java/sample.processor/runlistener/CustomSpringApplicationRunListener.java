@@ -27,13 +27,13 @@ import java.time.Duration;
 
 /**
  * 自定义 Spring 应用运行监听器示例
- * 
+ *
  * <p>该类演示了如何使用 {@code @AutoRunListener} 注解创建 Spring 应用运行监听器。
  * 注解处理器会自动将此类注册到 {@code META-INF/spring.factories} 文件中。</p>
- * 
+ *
  * <p><strong>重要提示：</strong>SpringApplicationRunListener 的实现类必须提供一个
  * 接受 {@code SpringApplication} 和 {@code String[]} 参数的构造函数。</p>
- * 
+ *
  * <p><strong>注册配置：</strong></p>
  * <pre>
  * org.springframework.boot.SpringApplicationRunListener=\
@@ -41,17 +41,17 @@ import java.time.Duration;
  * </pre>
  *
  * @author L.cm
- * @since 2.0.0
+ * @since 1.0.0
  */
 @AutoRunListener
 public class CustomSpringApplicationRunListener implements SpringApplicationRunListener {
-    
+
     private final SpringApplication application;
     private final String[] args;
-    
+
     /**
      * 构造函数 - 必须提供此构造函数
-     * 
+     *
      * @param application Spring 应用实例
      * @param args        应用启动参数
      */
@@ -59,20 +59,20 @@ public class CustomSpringApplicationRunListener implements SpringApplicationRunL
         this.application = application;
         this.args = args;
     }
-    
+
     /**
      * 应用开始启动时调用
-     * 
+     *
      * @param bootstrapContext 引导上下文
      */
     @Override
     public void starting(ConfigurableBootstrapContext bootstrapContext) {
         System.out.println("=== 自定义运行监听器：应用开始启动 ===");
     }
-    
+
     /**
      * 环境准备完成时调用
-     * 
+     *
      * @param bootstrapContext 引导上下文
      * @param environment      环境配置
      */
@@ -81,30 +81,30 @@ public class CustomSpringApplicationRunListener implements SpringApplicationRunL
         System.out.println("=== 自定义运行监听器：环境准备完成 ===");
         System.out.println("应用名称: " + environment.getProperty("spring.application.name", "unknown"));
     }
-    
+
     /**
      * 应用上下文准备完成时调用
-     * 
+     *
      * @param context 应用上下文
      */
     @Override
     public void contextPrepared(ConfigurableApplicationContext context) {
         System.out.println("=== 自定义运行监听器：应用上下文准备完成 ===");
     }
-    
+
     /**
      * 应用上下文加载完成时调用
-     * 
+     *
      * @param context 应用上下文
      */
     @Override
     public void contextLoaded(ConfigurableApplicationContext context) {
         System.out.println("=== 自定义运行监听器：应用上下文加载完成 ===");
     }
-    
+
     /**
      * 应用启动完成时调用
-     * 
+     *
      * @param context  应用上下文
      * @param timeTaken 启动耗时
      */
@@ -113,10 +113,10 @@ public class CustomSpringApplicationRunListener implements SpringApplicationRunL
         System.out.println("=== 自定义运行监听器：应用启动完成 ===");
         System.out.println("启动耗时: " + timeTaken.toMillis() + "ms");
     }
-    
+
     /**
      * 应用就绪时调用
-     * 
+     *
      * @param context  应用上下文
      * @param timeTaken 启动耗时
      */
@@ -125,10 +125,10 @@ public class CustomSpringApplicationRunListener implements SpringApplicationRunL
         System.out.println("=== 自定义运行监听器：应用就绪 ===");
         System.out.println("总耗时: " + timeTaken.toMillis() + "ms");
     }
-    
+
     /**
      * 应用启动失败时调用
-     * 
+     *
      * @param context   应用上下文
      * @param exception 异常信息
      */
