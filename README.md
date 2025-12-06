@@ -373,7 +373,7 @@ public class MyWebAutoConfiguration {
 
 ## 许可证
 
-本项目基于 MIT 许可证开源，详见 [LICENSE](LICENSE) 文件。
+本项目采用 MIT 许可证 - 查看 [LICENSE](https://github.com/zeka-stack/zeka-stack/blob/main/LICENSE) 文件了解详情。
 
 ## 联系方式
 
