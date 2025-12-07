@@ -1,4 +1,8 @@
-# Arco Processor 使用示例
+---
+published: 2022.02.21
+---
+
+# 使用示例
 
 本目录包含了 Arco Processor 注解处理器的完整使用示例，演示了所有支持的注解和特性。
 
