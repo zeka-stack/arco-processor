@@ -171,6 +171,6 @@ public class MyWebAutoConfiguration {
 
 ## 🔗 相关链接
 
-- [[arco-processor/index|处理器总览]]
-- [[arco-processor/arco-processor-core|处理器实现]]
-- [[arco-processor/arco-processor-sample|使用示例]]
+- [[arco-meta/arco-processor/index|处理器总览]]
+- [[arco-meta/arco-processor/arco-processor-core|处理器实现]]
+- [[arco-meta/arco-processor/arco-processor-sample/index|使用示例]]
