@@ -55,7 +55,7 @@ published: 2022.02.07
 <dependency>
     <groupId>dev.dong4j</groupId>
     <artifactId>arco-processor-annotation</artifactId>
-    <version>2.0.0-SNAPSHOT</version>
+    <version>3.0.0-SNAPSHOT</version>
 </dependency>
 ```
 
@@ -91,7 +91,7 @@ public class AlipayService implements PaymentService {
             <path>
                 <groupId>dev.dong4j</groupId>
                 <artifactId>arco-processor-core</artifactId>
-                <version>2.0.0-SNAPSHOT</version>
+                <version>3.0.0-SNAPSHOT</version>
             </path>
         </annotationProcessorPaths>
     </configuration>

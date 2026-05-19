@@ -50,7 +50,7 @@ Spring Boot 配置文件和 Java SPI 配置文件。
             <path>
                 <groupId>dev.dong4j</groupId>
                 <artifactId>arco-processor-core</artifactId>
-                <version>2.0.0-SNAPSHOT</version>
+                <version>3.0.0-SNAPSHOT</version>
             </path>
         </annotationProcessorPaths>
     </configuration>

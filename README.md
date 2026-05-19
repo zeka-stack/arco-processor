@@ -92,7 +92,7 @@ arco-processor/
     <dependency>
         <groupId>dev.dong4j</groupId>
         <artifactId>arco-processor-annotation</artifactId>
-        <version>2.0.0-SNAPSHOT</version>
+        <version>3.0.0-SNAPSHOT</version>
     </dependency>
 </dependencies>
 
@@ -107,7 +107,7 @@ arco-processor/
                     <path>
                         <groupId>dev.dong4j</groupId>
                         <artifactId>arco-processor-core</artifactId>
-                        <version>2.0.0-SNAPSHOT</version>
+                        <version>3.0.0-SNAPSHOT</version>
                     </path>
                 </annotationProcessorPaths>
             </configuration>
@@ -356,15 +356,6 @@ public class MyWebAutoConfiguration {
 - **Spring Boot 版本**：2.0+
 - **Maven 版本**：3.6+
 - **Gradle 版本**：6.0+
-
-## 版本历史
-
-### 2.0.0-SNAPSHOT
-
-- 重构代码架构，提升性能
-- 新增 AOT 编译支持
-- 完善文档和示例
-- 支持更多 Spring Boot 扩展点
 
 ## 贡献指南
 
